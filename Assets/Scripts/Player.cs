@@ -24,14 +24,14 @@ public class Player : MonoBehaviour
             jump = true;
         }
 
-        horizontal = Input.GetAxis("Horizontal");
+        horizontal = Input.GetAxis("Horizontal")*3;
     }
 
     private void FixedUpdate()
     {
         if(jump) 
         {
-            rigidBodyComponent.AddForce(6 * Vector3.up, ForceMode.VelocityChange);
+            rigidBodyComponent.AddForce(7 * Vector3.up, ForceMode.VelocityChange);
             jump = false;
             touchGround = false;
         }
